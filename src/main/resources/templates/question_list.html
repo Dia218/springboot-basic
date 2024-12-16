@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>question list</title>
+</head>
+<body>
+<h2> Question List Page </h2>
+
+<table>
+    <thead>
+    <tr>
+        <th> 제목 </th>
+        <th> 작성일 </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="question: ${questionList}">
+        <td>
+            <a th:href="@{|/question/detail/${question.id}|}" th:text="${question.subject}"></a>
+        </td>
+        <td th:text="${question.createDate}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

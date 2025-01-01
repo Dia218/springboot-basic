@@ -8,6 +8,12 @@
     <title>Hello, BasicSpring!</title>
 </head>
 <body>
+<!-- navbar -->
+<nav th:replace="~{navbar :: navbarFragment}"></nav>
+
 <th:block layout:fragment="content"></th:block>
+
+<!-- Bootstrap JS -->
+<script th:src="@{/bootstrap.min.js}"></script>
 </body>
 </html>
